@@ -1,0 +1,10 @@
+.header {
+  height: 100px;
+  background-color: #ffcd01;
+  margin: 0;
+  padding: 0;
+  &-fixed {
+      top: 0;
+      position: fixed;
+  }
+}
