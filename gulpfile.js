@@ -27,7 +27,7 @@ gulp.task('nunjucks', function () {
         }))
         .pipe(gulp.dest('dist/pages'))
         .pipe(connect.reload());
-        
+
 });
 
 gulp.task('sass', function () {
@@ -47,12 +47,18 @@ gulp.task('sass-common', function () {
         .pipe(connect.reload());
 });
 
+gulp.task('image', function () {
+    return gulp.src('src/assets/img/*')
+        .pipe(image())
+        .pipe(gulp.dest('dist/assets/img'));
+});
+
 gulp.task('watch', function () {
     gulp.watch('src/templates/**/*.html', gulp.series(['nunjucks']));
-    gulp.watch('src/assets/**/*.scss', gulp.series(['sass','sass-common']));
+    gulp.watch('src/assets/**/*.scss', gulp.series(['sass', 'sass-common']));
 });
 
 gulp.task('server', gulp.parallel(['watch', 'connect']));
 
 //Task primary
-gulp.task('default', gulp.series(['nunjucks', 'sass','sass-common', 'server']));
+gulp.task('default', gulp.series(['nunjucks', 'sass', 'sass-common', 'image','server']));

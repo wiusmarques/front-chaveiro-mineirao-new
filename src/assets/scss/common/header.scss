@@ -1,10 +1,209 @@
 .header {
-  height: 100px;
-  background-color: #ffcd01;
-  margin: 0;
+  height: 90px;
+  display: table;
+  margin: 0 auto;
+  background-color: #333;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
   &-fixed {
-      top: 0;
-      position: fixed;
+    top: 0;
+    position: fixed;
+    border-bottom: 3px solid #ffcb00;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
+
+  &-scroled {
+  }
+
+  &-menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    align-items: center;
+    &__list {
+      padding: 0 10px;
+      min-width: 100px;
+    }
+    a {
+      display: block;
+      color: #ffcb00;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    span:hover {
+      box-shadow: 0 2px 0 0 #ffcb00;
+    }
+  }
+  &-company {
+    visibility: visible;
+    background-color: #ffcb00;
+    text-align: center;
+    padding: 12px 0;
+    text-transform: uppercase;
+    @media screen and(max-width: 768px){
+      margin-top: 90px;  
+    }
+  }
+
+  /* Mobile Style */
+
+  &-mobile {
+    display: none;
+    @media screen and(max-width: 768px) {
+      display: block;
+    }
+
+    &__pin{
+      top: 0;
+      right: 0;
+      top: 19px;
+      right: 35px;
+      width: 45px;
+      height: 45px;
+      background-color: white;
+      background: url(//localhost:8080/assets/img/pin.svg); 
+      background-repeat: no-repeat; 
+      position: absolute;
+    }
+  }
+}
+
+.menuToggle {
+  display: block;
+  position: fixed;
+  top: 30px;
+  left: 50px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+.menuToggle input {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+.menuToggle span {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #ffcb00;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    opacity 0.55s ease;
+}
+
+.menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+.menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ffcb00;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+.menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+.menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+.menu {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+  }
+  font-family: "Quicksand", sans-serif;
+  margin: -100px 0 0 -50px;
+  padding: 50px 100px 1024px 45px;
+  padding-top: 125px;
+  border: none;
+  background: #333;
+  a {
+    display: block;
+    color: #ffcb00;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+
+  &-item:hover {
+    color: white;
+  }
+
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+.menuToggle input:checked ~ ul {
+  transform: none;
 }
