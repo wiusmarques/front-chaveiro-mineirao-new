@@ -1,0 +1,36 @@
+.container_home {
+
+  &-apresentation {
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 300px;
+    max-width: 1024px;
+    font-family: "Quicksand", sans-serif;
+    text-align: justify;
+
+    
+
+    @media screen and(max-width: 768px) {
+      display: inherit;
+      padding: 0;
+    }
+  }
+
+  &-item {
+    width: 49.999%;
+    @media screen and(max-width: 768px) {
+      width: 100%;
+    }
+    align-content: center;
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      @media screen and (max-width: 768px) {
+        padding: 20px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.footer{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    background-color: #333;
+
+    &-contact{
+
+        &-desktop{
+
+        }
+
+        &-mobile{
+            max-width: 320px;;
+            height: 70px;
+        }
+    }
+}
+
+.swiper-container{
+    height: 100%;
+}

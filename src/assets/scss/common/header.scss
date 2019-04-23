@@ -46,8 +46,8 @@
     text-align: center;
     padding: 12px 0;
     text-transform: uppercase;
-    @media screen and(max-width: 768px){
-      margin-top: 90px;  
+    @media screen and(max-width: 768px) {
+      margin-top: 90px;
     }
   }
 
@@ -59,7 +59,7 @@
       display: block;
     }
 
-    &__pin{
+    &__pin {
       top: 0;
       right: 0;
       top: 19px;
@@ -67,8 +67,8 @@
       width: 45px;
       height: 45px;
       background-color: white;
-      background: url(//localhost:8080/assets/img/pin.svg); 
-      background-repeat: no-repeat; 
+      background: url(//localhost:8080/assets/img/pin.svg);
+      background-repeat: no-repeat;
       position: absolute;
     }
   }
@@ -84,12 +84,22 @@
 
   -webkit-user-select: none;
   user-select: none;
+
+  &-element {
+  }
+}
+
+.menuToggle-element {
+  ::after {
+    content: "Menu";
+  }
 }
 .menuToggle input {
   display: none;
   @media screen and (max-width: 768px) {
     display: block;
   }
+
   width: 40px;
   height: 32px;
   position: absolute;
@@ -164,23 +174,24 @@
  */
 .menu {
   display: none;
+  font-family: "Quicksand", sans-serif;
+  margin: -100px 0 0 -50px;
+  padding: 50px 45px 1024px 45px;
+  padding-top: 125px;
+  border: none;
+  background: #333;
+  white-space: nowrap;
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
   }
-  font-family: "Quicksand", sans-serif;
-  margin: -100px 0 0 -50px;
-  padding: 50px 100px 1024px 45px;
-  padding-top: 125px;
-  border: none;
-  background: #333;
+
   a {
     display: block;
     color: #ffcb00;
     text-decoration: none;
     text-transform: uppercase;
   }
-
 
   &-item:hover {
     color: white;

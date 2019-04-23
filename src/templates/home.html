@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/common/common.min.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+
     <title>Chaveiro Mineirão - Home</title>
 </head>
 
@@ -15,27 +19,65 @@
 
     {% include "../templates/partials/header.html" %}
 
-    <section>
-        <div class="container body">
-            {% for n in range(0, 201) -%}
-            aaaaaaa {{ n }}<br>
-            {%- endfor %}
+    <section class="body">
+        <div class="container container_home-apresentation">
+            <div class="container_home-item"><img width="300" height="auto" src="/assets/img/locksmith.jpg" alt="">
+            </div>
+            <div class="container_home-item">
+                <h1>Serviço e Segurança</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique vitae nulla vitae
+                    dignissim. Duis vestibulum erat ut erat auctor, ac sagittis risus laoreet. Mauris ullamcorper, ex a
+                    aliquam mattis, ex enim lacinia libero, quis blandit augue augue et quam. Cras in felis ut neque
+                    luctus lacinia eu ornare felis. Ut sed mi nec enim dapibus vestibulum sit amet eu metus. Ut
+                    fringilla felis vel ligula aliquam facilisis. Suspendisse pharetra scelerisque dapibus.</p>
+            </div>
+        </div>
+        <div class="container container_home-apresentation">
+            <div class="container_home-item">
+                <h1>Serviço e Segurança</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique vitae nulla vitae
+                    dignissim. Duis vestibulum erat ut erat auctor, ac sagittis risus laoreet. Mauris ullamcorper, ex a
+                    aliquam mattis, ex enim lacinia libero, quis blandit augue augue et quam. Cras in felis ut neque
+                    luctus lacinia eu ornare felis. Ut sed mi nec enim dapibus vestibulum sit amet eu metus. Ut
+                    fringilla felis vel ligula aliquam facilisis. Suspendisse pharetra scelerisque dapibus.</p>
+            </div>
+            <div class="container_home-item"><img width="300" height="auto" src="/assets/img/locksmith.jpg" alt="">
+            </div>
+
         </div>
     </section>
 
     {% include "../templates/partials/footer.html" %}
 </body>
 
-<script>
-    window.onscroll = scroll;
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 
-    function scroll() {
-        if(scrollY >= 40){
-            //document.getElementsByClassName('header-company')[0].style.visibility = "visible";
-        }else{
-            //document.getElementsByClassName('header-company')[0].style.visibility = "hidden";
-        }
-    }
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+    window.onload = "mySwiper()";
+    
 </script>
 
 </html>

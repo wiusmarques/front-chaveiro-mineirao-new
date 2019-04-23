@@ -11,7 +11,6 @@ var debug = require('gulp-debug');
 
 //Register pages to copy files CSS and JS to HTML page
 
-
 gulp.task('connect', function () {
     connect.server({
         root: 'dist',
