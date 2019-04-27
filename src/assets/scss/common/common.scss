@@ -1,4 +1,3 @@
-
 body{
   margin: 0;
   position: relative;
@@ -15,9 +14,17 @@ section {
   width: 100%;
 }
 
-.container{
+.body{
   @media screen and (min-width: 769px){
-    margin-top: 160px;
+    margin-top: 144px;
   }
   
+}
+
+.ml-auto{
+  margin-right: auto;
+}
+
+.mr-auto{
+  margin-left: auto;
 }

@@ -8,7 +8,6 @@
   &-fixed {
     top: 0;
     position: fixed;
-    border-bottom: 3px solid #ffcb00;
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -43,6 +42,7 @@
   &-company {
     visibility: visible;
     background-color: #ffcb00;
+    border-bottom: 3px solid white;
     text-align: center;
     padding: 12px 0;
     text-transform: uppercase;
