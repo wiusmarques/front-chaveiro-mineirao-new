@@ -20,7 +20,7 @@
     {% include "../templates/partials/header.html" %}
 
     <section class="body">
-        
+
         <div class="container container_home-apresentation">
             <div class="container_home-item"><img width="300" height="auto" src="/assets/img/locksmith.jpg" alt="">
             </div>
@@ -48,7 +48,7 @@
 
         </div>
     </section>
-
+    {% include "../templates/partials/modal-whatsapp.html" %}
     {% include "../templates/partials/footer.html" %}
 </body>
 
@@ -77,9 +77,24 @@
             el: '.swiper-scrollbar',
         },
     });
-
     window.onload = "mySwiper()";
+
+    var prevScrollpos = window.pageYOffset;
     
+    document.getElementsByClassName("header-company")[0].onmouseover = function() {
+        document.getElementsByClassName('header')[0].style.top = "0"
+    };
+
+    window.onscroll = function () {
+        if(window.scrollY > 80){
+            console.log("Esconde");
+            document.getElementsByClassName('header')[0].style.top = "-80px"
+        }else{
+            console.log("Mostra");
+            document.getElementsByClassName('header')[0].style.top = "0"
+        }
+    }
+
 </script>
 
 </html>
