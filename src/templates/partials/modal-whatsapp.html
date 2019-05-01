@@ -1,31 +1,33 @@
-<div class="modal_whatsapp">
-
-    <form action="">
-        <div class="whatsapp-header">
-            <div class="whatsapp-image">
-                <img width="64px" height="64px" src="http://localhost:8080/assets/img/whatsapp-logo.png" alt="Image">
+<div class="modal_whatsapp-background d-block" id="modal-whatsapp-close">
+    <div class="modal_whatsapp" id="modal_whatsapp">
+        <form action="">
+            <div class="whatsapp-header">
+                <div class="whatsapp-image">
+                    <img height="47" width="47" src="http://localhost:8080/assets/img/whatsapp-logo.png" alt="Image">
+                </div>
+                <div class="whatsapp-title"><span>Envie uma mensagem</span></div>
+                <div class="whatsapp-close_icon"><img id="button-whatsapp-close" height="16" width="16" src="http://localhost:8080/assets/img/close-modal-whatsapp.png" alt="Image"></div>
             </div>
-            <div class="whatsapp-title"><span>Envie uma mensagem</span></div>
-        </div>
-        <div class="input-form">
-            <input type="text" placeholder="Nome" name="name">
-        </div>
-        <div class="input-form">
-            <input type="text" placeholder="Telefone" name="phone_number">
-        </div>
-        <div class="input-form">
-            <input type="text" placeholder="E-mail" name="email">
-        </div>
-        <div class="input-form">
-            <input type="text" placeholder="Mensagem" name="message">
-        </div>
-        <div class="input-form">
-            <button type="submit" name="message">Enviar Mensagem</button>
-        </div>
-    </form>
-
+            <div class="input-form">
+                <input type="text" placeholder="Nome" name="name" required>
+            </div>
+            <div class="input-form">
+                <input type="text" placeholder="Telefone" name="phone_number" required>
+            </div>
+            <div class="input-form">
+                <input type="email" placeholder="E-mail" name="email" required>
+            </div>
+            <div class="input-form">
+                <input type="text" placeholder="Mensagem" name="message" required>
+            </div>
+            <div class="buton_submit_form">
+                <button type="submit" name="message">Enviar Mensagem</button>
+            </div>
+        </form>
+    
+    </div>
 </div>
 
-<div class="whatsapp-button">
+<div class="whatsapp-button" id="whatsapp-button">
 
 </div>
