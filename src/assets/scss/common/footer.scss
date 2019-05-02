@@ -35,6 +35,7 @@
 
         &-swiper__wrapper{
             text-align: center;
+            
             color: #FFCB00;
             
             a{
@@ -49,7 +50,20 @@
 
     &-extras{
         margin-bottom: 70px;
-        background-color: red;
+        background-color: #FFCB00;
+        color: #403300;
+        &-container{
+            display: flex;
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &-item{
+            width: 33.33%;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
     }
 }
 
