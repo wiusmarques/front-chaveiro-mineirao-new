@@ -1,0 +1,76 @@
+.form-busca {
+  text-align: right;
+  width: 100%;
+  margin-right: 20px;
+  @media screen and(max-width:768px) {
+    text-align: center;
+  }
+  &-input {
+    padding: 10px;
+    border-color: #333333;
+  }
+
+  &-button {
+    font-family: Quicksand, sans-serif;
+    padding: 10px;
+    background-color: #333333;
+    border-color: #333333;
+    color: #ffcb00;
+    text-transform: uppercase;
+  }
+}
+
+.container-produtos {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+.card {
+  max-width: 300px;
+  margin: 20px;
+  background-color: #ffffff;
+  font-family: "Slabo 27px", serif;
+  background-color: #333333;
+  color: #ffcb00;
+  border: 1px solid;
+  box-shadow: 0px 0px 30px 1px #333;
+  &-image{
+      max-height: 300px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &-product_information {
+    padding: 10px;
+  }
+
+  &-product_name {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &-product_price {
+    margin: 0;
+  }
+
+  &-product_button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffcb00;
+    border-style: none;
+    cursor: pointer;
+  }
+}
+
+.row {
+  display: flex;
+  @media screen and(max-width: 768px) {
+    display: grid;
+    justify-content: center;
+  }
+}

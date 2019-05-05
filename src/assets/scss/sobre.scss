@@ -1,25 +1,12 @@
 .container {
-  
-  &-home {
-    &-apresentation {
-      display: flex;
-      padding: 30px;
-      //margin-bottom: 30px;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1024px;
-  
-      @media screen and(max-width: 768px) {
-        display: inherit;
-        padding: 0;
-      }
-    }
 
+  &-home {
+  
     &-item {
       width: 49.999%;
       display: grid;
       text-align: justify;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Slabo 27px', serif;
       @media screen and(max-width: 768px) {
         width: 100%;
       }
@@ -32,11 +19,10 @@
       }
 
       h1{
-        font-weight: 900;
         margin: 0;
+        font-size: 25px;
       }
       p{
-        font-weight: 300;
         font-size: 18px;
       }
     }
