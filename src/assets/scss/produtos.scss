@@ -1,3 +1,9 @@
+
+
+.header-company{
+  border-style: none!important;
+}
+
 .form-busca {
   text-align: right;
   width: 100%;
@@ -7,16 +13,28 @@
   }
   &-input {
     padding: 10px;
-    border-color: #333333;
+    border-color: #FFCB00;
+    border-style: none;
   }
 
   &-button {
     font-family: Quicksand, sans-serif;
     padding: 10px;
-    background-color: #333333;
-    border-color: #333333;
-    color: #ffcb00;
+    background-color: #FFCB00;
+    border-style: none;
+    color: #333333;
     text-transform: uppercase;
+  }
+}
+
+.body{
+  background-color: #f3f2f2;
+}
+
+.container-busca{
+  background-color: #333333;
+  @media screen and(max-width:768px){
+    padding: 30px 0 30px 0;
   }
 }
 
@@ -28,13 +46,17 @@
 
 .card {
   max-width: 300px;
-  margin: 20px;
   background-color: #ffffff;
   font-family: "Slabo 27px", serif;
-  background-color: #333333;
-  color: #ffcb00;
-  border: 1px solid;
-  box-shadow: 0px 0px 30px 1px #333;
+  border: 2px solid #f3f2f2;
+  font-family: Oswald,sans-serif;
+  &-product_title{
+    padding: 15px;
+    color: #333;
+    background-color: #FFCC00;
+    text-transform: uppercase;
+  }
+
   &-image{
       max-height: 300px;
   }
@@ -46,12 +68,14 @@
   }
 
   &-product_information {
-    padding: 10px;
+    padding: 10px 0 10px 20px;
+    
   }
 
   &-product_name {
-    font-size: 20px;
     margin: 0;
+    font-size: 18px;
+    
   }
 
   &-product_price {
@@ -61,7 +85,8 @@
   &-product_button {
     width: 100%;
     padding: 12px;
-    background-color: #ffcb00;
+    background-color: #333;
+    color: lemonchiffon;
     border-style: none;
     cursor: pointer;
   }
@@ -69,6 +94,8 @@
 
 .row {
   display: flex;
+  justify-content: center;
+  margin: 0 0 60px 0;
   @media screen and(max-width: 768px) {
     display: grid;
     justify-content: center;

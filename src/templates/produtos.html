@@ -10,94 +10,51 @@
     <link rel="stylesheet" href="/assets/css/common/common.min.css">
     <link rel="stylesheet" href="/assets/css/swiper-4.5.min.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
     <title>Document</title>
 </head>
 
 <body>
     {% include "../templates/partials/header.html" %}
 
+    
     <section class="body">
-        <div class="container-conteudo">
-            <div class="form-busca">
-                <form action="#">
-                    <input class="form-busca-input" type="text" placeholder="Protuto">
-                    <button class="form-busca-button" type="submit">Buscar</button>
-                </form>
-            </div>
-        </div>
-        <div class="container-conteudo">
-            <div class="container-produtos">
-                <div class="row">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="http://localhost:8080/assets/img/tetraChave.jpg" alt="">
-                        </div>
-                        <div class="card-product_information">
-                            <p class="card-product_name">Tetra Chave</p>
-                            <p class="card-product_price">R$98,90</p>
-                        </div>
-                        <button type="button" class="card-product_button">Solicitar</button>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="http://localhost:8080/assets/img/tetraChave.jpg" alt="">
-                        </div>
-                        <div class="card-product_information">
-                            <p class="card-product_name">Tetra Chave</p>
-                            <p class="card-product_price">R$98,90</p>
-                        </div>
-                        <button type="button" class="card-product_button">Solicitar</button>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="http://localhost:8080/assets/img/tetraChave.jpg" alt="">
-                        </div>
-                        <div class="card-product_information">
-                            <p class="card-product_name">Tetra Chave</p>
-                            <p class="card-product_price">R$98,90</p>
-                        </div>
-                        <button type="button" class="card-product_button">Solicitar</button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="http://localhost:8080/assets/img/tetraChave.jpg" alt="">
-                        </div>
-                        <div class="card-product_information">
-                            <p class="card-product_name">Tetra Chave</p>
-                            <p class="card-product_price">R$98,90</p>
-                        </div>
-                        <button type="button" class="card-product_button">Solicitar</button>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="http://localhost:8080/assets/img/tetraChave.jpg" alt="">
-                        </div>
-                        <div class="card-product_information">
-                            <p class="card-product_name">Tetra Chave</p>
-                            <p class="card-product_price">R$98,90</p>
-                        </div>
-                        <button type="button" class="card-product_button">Solicitar</button>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="http://localhost:8080/assets/img/tetraChave.jpg" alt="">
-                        </div>
-                        <div class="card-product_information">
-                            <p class="card-product_name">Tetra Chave</p>
-                            <p class="card-product_price">R$98,90</p>
-                        </div>
-                        <button type="button" class="card-product_button">Solicitar</button>
-                    </div>
+        <div class="container container-busca">
+            <div class="container-conteudo">
+                <div class="form-busca">
+                    <form action="#">
+                        <input class="form-busca-input" type="text" placeholder="Protuto">
+                        <button class="form-busca-button" type="submit">Buscar</button>
+                    </form>
                 </div>
             </div>
         </div>
+        <div class="container ">
+            <div class="container-conteudo">
+                <div class="container-produtos">
+
+                    {% for i in range(0, 3) -%}
+                    <div class="row">
+                        {% for i in range(0, 4) -%}
+                        <div class="card">
+                            <div class="card-product_title">
+                                <p class="card-product_name">Tetra Chave</p>
+                            </div>
+                            <div class="card-image">
+                                <img src="http://localhost:8080/assets/img/cadeado.webp" alt="">
+                            </div>
+                            <div class="card-product_information">
+
+                                <p class="card-product_price"><span>Por apenas </span>R$98,90</p>
+                            </div>
+                            <button type="button" class="card-product_button">COMPRAR</button>
+                        </div>
+                        {%- endfor %}
+                    </div>
+                    {%- endfor %}
+                </div>
+            </div>
     </section>
 
     {% include "../templates/partials/modal-whatsapp.html" %}
