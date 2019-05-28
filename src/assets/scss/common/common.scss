@@ -68,12 +68,19 @@ section {
   }
 }
 
+/*Margins*/
 .ml-auto {
   margin-right: auto;
 }
 
 .mr-auto {
   margin-left: auto;
+}
+
+/*Padding*/
+
+.p-10{
+  padding: 10px;
 }
 
 .d-none {
