@@ -3,25 +3,97 @@
     height: 372px !important;
   }
 
-  &-item{
+  &-item {
     display: flex;
     align-items: center;
-    @media screen and(max-width:768px){
-       justify-content: center;
+    @media screen and(max-width:768px) {
+      justify-content: center;
     }
   }
 
-  &-card{
-      max-width: 300px;
-      max-height: 150x;
-      background-color: rgba(255,255,255,0.8);
-      border-radius: 16px;
-      padding: 0 25px 0 25px;
-      @media screen and(min-width:768px){
-        margin-left: 150px;
-      }
-  }
+  &-card {
+    max-width: 300px;
+    max-height: 150x;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 0 15px 0 30px;
+    :nth-child(1) {
+      font-family: Quicksand;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    :nth-child(2) {
+      font-family: Quicksand;
+      font-style: normal;
+    }
+    @media screen and(max-width:768px) {
+      max-width: 192px;
+      background-color: rgba(255, 255, 255, 1);
+    }
 
-  
-  
+    @media screen and(min-width:768px) {
+      margin-left: 150px;
+    }
+  }
+}
+
+.container {
+  &-services {
+    display: flex;
+    width: 100%;
+    @media screen and(max-width: 768px) {
+      display: grid;
+    }
+    &-card {
+      padding: 50px 30px 70px 30px;
+      text-align: center;
+      width: 33.33%;
+      position: relative;
+      font-family: Quicksand;
+      color: white;
+      
+      @media screen and(max-width: 768px) {
+        width: 100%;
+      }
+
+      :nth-child(1) {
+        text-transform: uppercase;
+        font-size: 30px;
+      }
+      :nth-child(2) {
+        min-height: 140px;
+        font-size: 20px;
+      }
+
+      :nth-child(3) {
+        cursor: pointer;
+        text-decoration: none;
+        border: none;
+        text-transform: uppercase;
+        padding: 10px 50px 10px 50px;
+        
+      }
+
+      &-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      &-background-products {
+        background-image: url("../../assets/img/key-background.jpg");
+      }
+
+      &-background-services {
+        background-image: url("../../assets/img/locksmith-suffolk.jpg");
+      }
+
+      &-background-location {
+        background-image: url("../../assets/img/map.jpg");
+      }
+    }
+  }
 }
