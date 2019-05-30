@@ -51,7 +51,7 @@
       position: relative;
       font-family: Quicksand;
       color: white;
-      
+      border: 1px solid gray;
       @media screen and(max-width: 768px) {
         width: 100%;
       }
@@ -61,18 +61,40 @@
         font-size: 30px;
       }
       :nth-child(2) {
-        min-height: 140px;
+        min-height: 170px;
         font-size: 20px;
+        @media screen and(max-width:870px){
+          min-height: 250px;
+        }
       }
 
       :nth-child(3) {
-        cursor: pointer;
-        text-decoration: none;
+        outline: none;
+        text-decoration: inherit;
         border: none;
         text-transform: uppercase;
+        background-color: #FFCB00;
         padding: 10px 50px 10px 50px;
+        color: black;
+        &:link {
+          color: #265301;
+        }
+        &:link {
+          color: #265301;
+        }
+        &:focus {
+          background: #BAE498;
+        }
+        &:hover {   
+          background: white;
+        }
         
       }
+      
+      
+      
+      
+      
 
       &-background {
         width: 100%;
