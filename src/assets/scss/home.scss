@@ -1,6 +1,9 @@
 .swiper {
   &-container-home {
-    height: 372px !important;
+    height: 600px!important;
+    @media screen and(max-width: 768px){
+      height: 372px!important;
+    }
   }
 
   &-item {
@@ -18,12 +21,12 @@
     border-radius: 16px;
     padding: 0 15px 0 30px;
     :nth-child(1) {
-      font-family: Quicksand;
+      font-family: 'Cabin', sans-serif;
       font-weight: bold;
       text-transform: uppercase;
     }
     :nth-child(2) {
-      font-family: Quicksand;
+      font-family: 'Cabin', sans-serif;
       font-style: normal;
     }
     @media screen and(max-width:768px) {
@@ -41,28 +44,29 @@
   &-services {
     display: flex;
     width: 100%;
+    background-color: rgba(0,0,0,0.8);
     @media screen and(max-width: 768px) {
       display: grid;
     }
     &-card {
+      font-family: 'Varela Round', sans-serif;
       padding: 50px 30px 70px 30px;
       text-align: center;
+      color: white;
       width: 33.33%;
       position: relative;
-      font-family: Quicksand;
-      color: white;
-      border: 1px solid gray;
       @media screen and(max-width: 768px) {
+        margin: 0 5px 0 5px;
         width: 100%;
       }
 
       :nth-child(1) {
         text-transform: uppercase;
-        font-size: 30px;
+        font-size: 32px;
       }
       :nth-child(2) {
         min-height: 170px;
-        font-size: 20px;
+        font-size: 22px;
         @media screen and(max-width:870px){
           min-height: 250px;
         }
