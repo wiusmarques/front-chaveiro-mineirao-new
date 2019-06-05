@@ -39,6 +39,13 @@ gulp.task('copy-css', function () {
 
 });
 
+gulp.task('copy-fonts', function () {
+    return gulp.src('src/assets/fonts/*.woff2')
+        .pipe(gulp.dest('dist/assets/fonts'))
+        .pipe(connect.reload());
+
+});
+
 gulp.task('sass', function () {
     return gulp.src("src/assets/scss/*.scss")
         .pipe(sass())
@@ -70,4 +77,4 @@ gulp.task('watch', function () {
 gulp.task('server', gulp.parallel(['watch', 'connect']));
 
 //Task primary
-gulp.task('default', gulp.series(['nunjucks', 'sass','copy-css', 'sass-common', 'image','server']));
+gulp.task('default', gulp.series(['nunjucks', 'sass','copy-css','copy-fonts', 'sass-common', 'image','server']));
