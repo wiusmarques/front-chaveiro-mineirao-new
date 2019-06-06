@@ -1,3 +1,6 @@
+html {
+  font-family: Open Sans;
+}
 .swiper {
   &-container-home {
     height: 600px!important;
@@ -21,12 +24,12 @@
     border-radius: 16px;
     padding: 0 15px 0 30px;
     :nth-child(1) {
-      font-family: 'Cabin', sans-serif;
-      font-weight: bold;
-      text-transform: uppercase;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 25px;
+      color: rgb(0, 0, 0);
     }
     :nth-child(2) {
-      font-family: 'Cabin', sans-serif;
       font-style: normal;
     }
     @media screen and(max-width:768px) {
@@ -41,20 +44,37 @@
 }
 
 .container {
+  &-services_title{
+    background-color: #FFCB00;
+    min-height: 100px;
+    display: grid;
+    align-content: center;
+    
+    :nth-child(1) {
+      margin: 0;
+    }
+    :nth-child(2) {
+      margin: 0;
+    }
+
+  }
   &-services {
     display: flex;
     width: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,0.8);
     @media screen and(max-width: 768px) {
       display: grid;
     }
+
+
+
     &-card {
-      font-family: 'Varela Round', sans-serif;
       padding: 50px 30px 70px 30px;
       text-align: center;
-      color: white;
       width: 33.33%;
       position: relative;
+      font-family: Open Sans;
+      
       @media screen and(max-width: 768px) {
         padding: 0;
         width: 100%;
@@ -62,34 +82,45 @@
       }
 
       :nth-child(1) {
-        text-transform: uppercase;
         font-size: 32px;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 22px;
       }
       :nth-child(2) {
         min-height: 170px;
-        font-size: 22px;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
       }
 
       :nth-child(3) {
-        outline: none;
         text-decoration: inherit;
         border: none;
         text-transform: uppercase;
         background-color: #FFCB00;
         padding: 10px 50px 10px 50px;
         margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 600;
+        font-family: Open Sans;
+        font-style: normal;
         color: black;
         &:link {
-          color: #265301;
+          color: black;
         }
         &:link {
-          color: #265301;
+          color: black;
         }
         &:focus {
-          background: #BAE498;
+          background: #FFCB00;
         }
         &:hover {   
-          background: white;
+          background: black;
+          color: #FFCB00;
         }
         
       }
