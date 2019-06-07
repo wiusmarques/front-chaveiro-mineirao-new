@@ -65,15 +65,24 @@
       
     }
     &-item {
-      width: 33.33%;
+
+      li{
+        text-decoration: none;
+        padding: 5px 0 0 0;
+        list-style: none;
+      }
+
+      width: 49.99%;
+      text-align: center;
       @media screen and(max-width:768px){
+        text-align: center;
         width: 100%;
       }
       font-size: 14px;
       padding: 10px 0 0 0;
-      :nth-child(1){
+      :nth-child(2){
         text-transform: uppercase;
-        text-align: center;
+        text-align: left;
       }
 
     }
@@ -81,22 +90,38 @@
       display: grid;
       text-decoration: none;
       align-content: center;
-      font-weight: 300;
+      font-weight: 600;
       font-style: normal;
       font-size: 12px;;
       padding: 2px 0 2px 0;
       color: black;
-      &:link {
-        color: black;
-      }
-      &:link {
-        color: black;
-      }
-      &:focus {
-        background: #FFCB00;
+      &:hover {
+        color: brown;;
       }
     }
   }
+}
+
+.container-copyright{
+  text-align: center;
+  width: 100%;
+  font-size: 11px;
+  
+  &-link{
+    text-decoration: none;
+    color: blue;
+    
+    &:link {
+      color: black;
+    }
+    &:link {
+      color: black;
+    }
+    &:focus {
+      background: #FFCB00;
+    }
+  }
+
 }
 
 /*Swiper Style*/
