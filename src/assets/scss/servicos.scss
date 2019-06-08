@@ -1,3 +1,11 @@
+html {
+    font-family: Open Sans;
+}
+
+body{
+    background-color: #F3F2F2;
+}
+
 .container{
     &-services{
         justify-content: center;
@@ -6,15 +14,78 @@
     }
     
     &-service{
-        background-color: red;
         max-width: 1024px;
         width: 100%;
+    }
+}
+
+.service{
+    &-title{
+        font-weight: 600;
+        font-style: normal;
+        font-size: 30px;
+    }
+
+    &-card{
+        width: 49.99%;
+        @media screen and(max-width:768px){
+            width: 100%;
+        }
+        &-image{
+            text-align: center;
+            @media screen and(max-width:768px){
+                max-width: 330px;
+            }
+        }
+
+        &-text{
+            height: 60%;
+            @media screen and(max-width:768px){
+                height: 180px;
+                max-width: 330px;
+            }
+        }
+
+        &-button{
+            height: 40%;
+            -webkit-align-items: center;
+            display: flex;
+            align-items: flex-end;
+            display: -webkit-flex;
+            @media screen and(max-width:768px){
+                display: block;
+                height: 50px;
+            }
+        }
     }
 }
 
 .row{
     &-service{
         width: 100%;
-        min-height: 250px;
+        height: 100%;
+        padding: 40px 0 40px 0;
+        min-height: 200px;
+        display: flex;
+        @media screen and(max-width:768px){
+            text-align: center;
+            display: grid;
+            justify-content: center;
+            padding: 20px 0 20px 0;
+        }
+        &-title{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            text-transform: uppercase;
+        }
+
+        &-paragraph{
+            font-weight: 300;
+            font-style: normal;
+            padding-top: 10px;
+            font-size: 16px;
+            line-height: 26px;
+        }
     }
 }

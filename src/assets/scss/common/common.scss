@@ -129,7 +129,63 @@ section {
     margin-top: 134px;
   }
 }
+//Buttons
 
+.btn {
+  &-cotacao{
+    text-decoration: inherit;
+    border: none;
+    text-transform: uppercase;
+    background-color: #FFCB00;
+    padding: 10px 50px 10px 50px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    font-family: Open Sans;
+    font-style: normal;
+    color: black;
+    &:link {
+      color: black;
+    }
+    &:link {
+      color: black;
+    }
+    &:focus {
+      background: #FFCB00;
+    }
+    &:hover {   
+      background: black;
+      color: #FFCB00;
+    }
+  }
+  
+}
+
+.container-title {
+  background-color: #333;
+  @media screen and(max-width:768px) {
+    padding: 20px;
+  }
+}
+
+.map-title {
+  font-family: Quicksand, sans-serif;
+  width: 100%;
+  text-transform: uppercase;
+  color: #FFCB00;
+  padding: 0;
+  margin: 0;
+
+  @media screen and(max-width:768px) {
+    text-align: center;
+  }
+}
+
+/*Aling*/
+.align-center{
+  text-align: center;
+}
 /*Margins*/
 .ml-auto {
   margin-right: auto;
@@ -137,6 +193,14 @@ section {
 
 .mr-auto {
   margin-left: auto;
+}
+
+.m-0{
+  margin: 0;
+}
+
+.position-absolute{
+  position: absolute;
 }
 
 /*Padding*/

@@ -45,11 +45,11 @@ html {
 
 .container {
   &-services_title{
-    background-color: #FFCB00;
+    background-color: #333333;
     min-height: 100px;
     display: grid;
     align-content: center;
-    
+    color: #FFCB00;
     :nth-child(1) {
       margin: 0;
     }
@@ -95,40 +95,6 @@ html {
         line-height: 30px;
         text-align: center;
       }
-
-      :nth-child(3) {
-        text-decoration: inherit;
-        border: none;
-        text-transform: uppercase;
-        background-color: #FFCB00;
-        padding: 10px 50px 10px 50px;
-        margin-bottom: 10px;
-        font-size: 14px;
-        line-height: 17px;
-        font-weight: 600;
-        font-family: Open Sans;
-        font-style: normal;
-        color: black;
-        &:link {
-          color: black;
-        }
-        &:link {
-          color: black;
-        }
-        &:focus {
-          background: #FFCB00;
-        }
-        &:hover {   
-          background: black;
-          color: #FFCB00;
-        }
-        
-      }
-      
-      
-      
-      
-      
 
       &-background {
         width: 100%;

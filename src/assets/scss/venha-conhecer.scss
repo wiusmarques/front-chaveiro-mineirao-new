@@ -12,22 +12,4 @@ iframe{
   border-bottom: 0px !important;
 }
 
-.container-title {
-  background-color: #333;
-  @media screen and(max-width:768px) {
-    padding: 20px;
-  }
-}
 
-.map-title {
-  font-family: Quicksand, sans-serif;
-  width: 100%;
-  text-transform: uppercase;
-  color: #FFCB00;
-  padding: 0;
-  margin: 0;
-
-  @media screen and(max-width:768px) {
-    text-align: center;
-  }
-}

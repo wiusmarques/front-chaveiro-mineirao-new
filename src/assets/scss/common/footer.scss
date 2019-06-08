@@ -7,6 +7,7 @@
   font-family: Quicksand, sans-serif;
   display: flex;
   z-index: 2;
+  border-top: 3px solid #fff;
   &-desktop {
     width: 70%;
     display: flex;
@@ -48,7 +49,7 @@
 
   &-extras {
     
-    margin-bottom: 70px;
+    margin-bottom: 72px;
     background-color: #ffcb00;
     color: #403300;
     
