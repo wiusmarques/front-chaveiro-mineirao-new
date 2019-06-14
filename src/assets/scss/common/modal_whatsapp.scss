@@ -34,13 +34,27 @@
     height: 60px;
     bottom: 0;
     margin-left: 30px;
-    margin-bottom: 85px;
+    margin-bottom: 95px;
     background-image: url("../../img/whatsapp_icon.svg");
     transition: transform 0.5s;
     z-index: 1;
     cursor: pointer;
+
+    &::before{
+      content: 'Whatsapp';
+      background-color: #ADDC51 ;
+      border: none;
+      border-radius: 4px 4px 4px 4px ;
+      color: #333333 ;
+      font-size: 12px;
+      padding: 0 5px 0 5px;
+      margin: 61px 0 0 -4px;
+      position: absolute;
+      
+    }
+
     &:hover {
-      transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     }
   }
 

@@ -57,10 +57,14 @@
       text-align: center;
       text-decoration: none;
       text-transform: uppercase;
+
     }
     span:hover {
       box-shadow: 0 2px 0 0 #ffcb00;
     }
+
+    
+
   }
   &-company {
     visibility: visible;
@@ -86,14 +90,27 @@
     &__pin {
       top: 0;
       right: 0;
-      top: 19px;
+      top: 14px;
       right: 35px;
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       background-color: white;
-      background: url(../assets/img/pin.svg);
+      background: url(../../img/pin.svg);
       background-repeat: no-repeat;
       position: absolute;
+
+      &::before{
+        content: 'Mapa';
+        border: none;
+        border-radius: 4px 4px 4px 4px ;
+        color: #FFCB00 ;
+        font-size: 16px;
+        padding: 0 5px 0 5px;
+        margin: 42px 0 0 -5px;
+        position: absolute;
+        font-weight: 600;
+      }
+
     }
   }
 }
@@ -101,13 +118,25 @@
 .menuToggle {
   display: block;
   position: fixed;
-  top: 30px;
-  left: 50px;
+  top: 24px;
+  left: 40px;
 
   z-index: 2;
 
   -webkit-user-select: none;
   user-select: none;
+
+  &::before{
+    content: 'Menu';
+    border: none;
+    border-radius: 4px 4px 4px 4px ;
+    color: #FFCB00 ;
+    font-size: 16px;
+    padding: 0 5px 0 5px;
+    margin: 30px 0 0 -10px;
+    position: absolute;
+    font-weight: 600;
+  }
 }
 
 .menuToggle-element {
