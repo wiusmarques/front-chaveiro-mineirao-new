@@ -1,30 +1,30 @@
-.container {
+html {
+  font-family: Open Sans;
+}
 
-  &-home {
-  
-    &-item {
-      width: 49.999%;
-      display: grid;
-      text-align: justify;
-      font-family: 'Slabo 27px', serif;
-      @media screen and(max-width: 768px) {
-        width: 100%;
-      }
-      align-content: center;
-      img {
-        display: block;
-        @media screen and (max-width: 768px) {
-          padding: 20px 0;
-        }
-      }
-
-      h1{
-        margin: 0;
-        font-size: 25px;
-      }
-      p{
-        font-size: 18px;
+.container{
+  &-about{
+    @media screen and(max-width: 768px){
+      display: flex!important;
+      flex-direction: column-reverse!important;
+    }
+    &-image{
+      @media screen and(max-width: 768px){
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+        display: grid;
       }
     }
   }
 }
+
+.about{
+  &-description{
+    padding-left: 30px;
+    p{
+      font-size: 14px;
+    }
+  }
+}
+

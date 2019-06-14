@@ -132,28 +132,52 @@ section {
 //Buttons
 
 .btn {
+  text-decoration: inherit;
+  border: none;
+  font-size: 11px;
+  line-height: 17px;
+  font-weight: 600;
+  font-family: Open Sans;
+  font-style: normal;
+  
+
   &-cotacao{
-    text-decoration: inherit;
-    border: none;
+
     text-transform: uppercase;
     background-color: #FFCB00;
-    padding: 10px 50px 10px 50px;
+    padding: 10px 45px 10px 45px;
     margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 17px;
-    font-weight: 600;
-    font-family: Open Sans;
-    font-style: normal;
     color: black;
-    &:link {
-      color: black;
+
+    &-home{
+      font-size: 14px;
+
+      &:hover {   
+        background: black;
+        color: #FFCB00;
+      }
+
     }
-    &:link {
-      color: black;
+    
+  }
+
+  &-ligacao{
+    text-transform: uppercase;
+    background-color: #333333;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 10px;
+    color: #FFCB00;
+    &:hover {   
+      background: black;
+      color: #FFCB00;
     }
-    &:focus {
-      background: #FFCB00;
-    }
+  }
+
+  &-show-route{
+    padding: 10px 50px 10px 50px;
+    background-color: #333333;
+    color: #FFCB00;
+    font-size: 15px;
     &:hover {   
       background: black;
       color: #FFCB00;
