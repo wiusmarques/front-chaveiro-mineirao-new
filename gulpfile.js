@@ -3,11 +3,9 @@ var connect = require('gulp-connect');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
-var fs = require('fs');
+const minify = require('gulp-minify');
 var nunjucks = require('gulp-nunjucks-html');
-var inject = require('gulp-inject-string');
 var image = require('gulp-image');
-var debug = require('gulp-debug');
 
 //Register pages to copy files CSS and JS to HTML page
 
@@ -63,6 +61,14 @@ gulp.task('sass-common', function () {
         .pipe(connect.reload());
 });
 
+
+ 
+gulp.task('compress', function() {
+  return gulp.src(['src/assets/js/*.js'])
+    .pipe(minify())
+    .pipe(gulp.dest('dist/assets/js'));
+});
+
 gulp.task('image', function () {
     return gulp.src('src/assets/img/*')
         .pipe(image())
@@ -72,9 +78,10 @@ gulp.task('image', function () {
 gulp.task('watch', function () {
     gulp.watch('src/templates/**/*.html', gulp.series(['nunjucks']));
     gulp.watch('src/assets/**/*.scss', gulp.series(['sass', 'sass-common']));
+    gulp.watch('src/assets/**/*.js', gulp.series(['compress']));
 });
 
 gulp.task('server', gulp.parallel(['watch', 'connect']));
 
 //Task primary
-gulp.task('default', gulp.series(['nunjucks', 'sass','copy-css','copy-fonts', 'sass-common', 'image','server']));
+gulp.task('default', gulp.series(['nunjucks', 'sass','copy-css','copy-fonts', 'sass-common', 'compress', 'image','server']));

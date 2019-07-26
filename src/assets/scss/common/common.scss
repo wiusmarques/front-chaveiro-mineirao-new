@@ -131,6 +131,18 @@ section {
 }
 //Buttons
 
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+}
+
+.swiper-container-vertical > .swiper-pagination {
+  right: 10px;
+  top: 50%;
+  -moz-transform: translate3d(0px, -50%, 1px);
+  -webkit-transform: translate3d(0px, -50%, 1px);
+  transform: translate3d(0px, -50%, 1px);
+}
+
 .btn {
   text-decoration: inherit;
   border: none;

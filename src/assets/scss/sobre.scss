@@ -22,6 +22,10 @@ html {
 .about{
   &-description{
     padding-left: 30px;
+    @media screen and(max-width:768px){
+      padding: 5px;
+      text-align: justify;
+    }
     p{
       font-size: 14px;
     }
