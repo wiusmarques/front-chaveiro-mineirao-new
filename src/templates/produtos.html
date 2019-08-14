@@ -24,7 +24,14 @@
             <div class="container-conteudo">
                 <div class="form-busca">
                     <form action="#">
-                        <input class="form-busca-input" type="text" placeholder="Protuto">
+                        <input class="form-busca-input" list="browsers" name="browser" placeholder="Protuto">
+                        <datalist id="browsers">
+                            <option value="Internet Explorer">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                          </datalist>
                         <button class="form-busca-button" type="submit">Buscar</button>
                     </form>
                 </div>
@@ -58,10 +65,12 @@
     </section>
 
     {% include "../templates/partials/modal-whatsapp.html" %}
+    {% include "../templates/partials/modal-contact.html" %}
     {% include "../templates/partials/footer.html" %}
 </body>
 
-<script src="https://stiapp.com.br/pages/chaveiro-mineirao/assets/js/swiper-4.5.0-min.js"></script>
-<script src="https://stiapp.com.br/pages/chaveiro-mineirao/assets/js/common-min.js"></script>
+
+<script src="../assets/js/swiper-4.5.0-min.js"></script>
+<script src="../assets/js/common-min.js"></script>
 
 </html>

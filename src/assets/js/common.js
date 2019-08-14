@@ -36,17 +36,44 @@ window.onscroll = function () {
     }
 }
 
+
+
 document.getElementById("modal-whatsapp-close").onclick = function (e) {
     if (!document.getElementById('modal_whatsapp').contains(e.target)) {
         element.removeClass("modal-whatsapp-close", "d-block");
         element.addClass("modal-whatsapp-close", "d-none");
     }
+
 };
 
-document.getElementById("whatsapp-button").onclick = function(e){
-    element.removeClass("modal-whatsapp-close", "d-none");
-    element.addClass("modal-whatsapp-close", "d-block");
+
+document.getElementById("modal-contact-close").onclick = function (e) {
+    if (!document.getElementById('modal_contact').contains(e.target)) {
+        element.removeClass("modal-contact-close", "d-block");
+        element.addClass("modal-contact-close", "d-none");
+    }
+
+};
+
+var btnWhatsapp = document.getElementsByClassName("whatsapp-button");
+
+for(let btn of btnWhatsapp){
+    btn.onclick = function(e){
+        element.removeClass("modal-whatsapp-close", "d-none");
+        element.addClass("modal-whatsapp-close", "d-block");
+    }
 }
+
+var btnContact = document.getElementsByClassName("modal-contact-action");
+
+for(var btn of btnContact){
+    btn.onclick = function(e){
+        element.removeClass("modal-contact-close", "d-none");
+        element.addClass("modal-contact-close", "d-block");
+    }
+}
+
+
 
 document.getElementById('button-whatsapp-close').onclick = function(e){
     element.removeClass("modal-whatsapp-close", "d-block");

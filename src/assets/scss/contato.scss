@@ -17,10 +17,7 @@ html {
   border-bottom: 0px !important;
 }
 
-.btn-phone{
-  font-size: 22px!important;
-  color: #333333;
-}
+
 
 .contact{
 
@@ -39,15 +36,18 @@ html {
   }
 
   &-section{
-    width: 33.33%;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 40px;
+    
     @media screen and(max-width:768px){
       width: 100%;
     }
   }
 
   &-phone{
-    font-weight: 300;
-    font-style: normal;
+    padding-bottom: 5px;
+    
   }
 
 }
