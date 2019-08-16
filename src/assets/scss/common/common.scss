@@ -264,6 +264,14 @@ section {
   display: block;
 }
 
+.hide{
+  opacity: 0!important;
+  pointer-events: none;
+}
+.invisible{
+  visibility: hidden;
+}
+
 .w-100 {
   width: 100%;
 }

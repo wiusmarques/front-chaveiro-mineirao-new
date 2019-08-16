@@ -40,8 +40,8 @@ window.onscroll = function () {
 
 document.getElementById("modal-whatsapp-close").onclick = function (e) {
     if (!document.getElementById('modal_whatsapp').contains(e.target)) {
-        element.removeClass("modal-whatsapp-close", "d-block");
-        element.addClass("modal-whatsapp-close", "d-none");
+       // element.removeClass("modal-whatsapp-close", "d-block");
+        element.addClass("modal-whatsapp-close", "hide");
     }
 
 };
@@ -49,35 +49,41 @@ document.getElementById("modal-whatsapp-close").onclick = function (e) {
 
 document.getElementById("modal-contact-close").onclick = function (e) {
     if (!document.getElementById('modal_contact').contains(e.target)) {
-        element.removeClass("modal-contact-close", "d-block");
-        element.addClass("modal-contact-close", "d-none");
+        element.addClass("modal-contact-close", "hide");
     }
 
 };
 
-var btnWhatsapp = document.getElementsByClassName("whatsapp-button");
+var btnWhatsapp = document.getElementsByClassName("whatsapp-button-action");
 
 for(let btn of btnWhatsapp){
     btn.onclick = function(e){
-        element.removeClass("modal-whatsapp-close", "d-none");
-        element.addClass("modal-whatsapp-close", "d-block");
+        element.removeClass("modal-whatsapp-close", "invisible");
+        element.removeClass("modal-whatsapp-close", "hide");
     }
 }
 
 var btnContact = document.getElementsByClassName("modal-contact-action");
 
-for(var btn of btnContact){
+for(let btn of btnContact){
     btn.onclick = function(e){
-        element.removeClass("modal-contact-close", "d-none");
-        element.addClass("modal-contact-close", "d-block");
+        element.removeClass("modal-contact-close", "invisible");
+        element.removeClass("modal-contact-close", "hide");
+    }
+}
+
+var closeContactModal = document.getElementsByClassName("modal-contact-close");
+
+for(let btn of closeContactModal){
+    btn.onclick = function(e){
+        element.addClass("modal-contact-close", "hide");
     }
 }
 
 
 
 document.getElementById('button-whatsapp-close').onclick = function(e){
-    element.removeClass("modal-whatsapp-close", "d-block");
-    element.addClass("modal-whatsapp-close", "d-none");
+    element.addClass("modal-whatsapp-close", "hide");
 }
 
 
