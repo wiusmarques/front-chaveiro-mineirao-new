@@ -279,6 +279,11 @@ section {
 .text-center{
   text-align: center;
 }
+
+.modal-open{
+  overflow-y: hidden;
+}
+
 .container-conteudo {
   display: flex;
   padding: 30px;

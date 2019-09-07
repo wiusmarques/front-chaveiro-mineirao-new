@@ -40,8 +40,8 @@ window.onscroll = function () {
 
 document.getElementById("modal-whatsapp-close").onclick = function (e) {
     if (!document.getElementById('modal_whatsapp').contains(e.target)) {
-       // element.removeClass("modal-whatsapp-close", "d-block");
         element.addClass("modal-whatsapp-close", "hide");
+        document.getElementsByTagName("body")[0].classList.remove("modal-open");
     }
 
 };
@@ -50,6 +50,7 @@ document.getElementById("modal-whatsapp-close").onclick = function (e) {
 document.getElementById("modal-contact-close").onclick = function (e) {
     if (!document.getElementById('modal_contact').contains(e.target)) {
         element.addClass("modal-contact-close", "hide");
+        document.getElementsByTagName("body")[0].classList.remove("modal-open");
     }
 
 };
@@ -60,6 +61,7 @@ for(let btn of btnWhatsapp){
     btn.onclick = function(e){
         element.removeClass("modal-whatsapp-close", "invisible");
         element.removeClass("modal-whatsapp-close", "hide");
+        document.getElementsByTagName("body")[0].classList.add("modal-open");
     }
 }
 
@@ -69,6 +71,7 @@ for(let btn of btnContact){
     btn.onclick = function(e){
         element.removeClass("modal-contact-close", "invisible");
         element.removeClass("modal-contact-close", "hide");
+        document.getElementsByTagName("body")[0].classList.add("modal-open");
     }
 }
 
@@ -77,6 +80,7 @@ var closeContactModal = document.getElementsByClassName("modal-contact-close");
 for(let btn of closeContactModal){
     btn.onclick = function(e){
         element.addClass("modal-contact-close", "hide");
+        document.getElementsByTagName("body")[0].classList.remove("modal-open");
     }
 }
 
@@ -84,6 +88,7 @@ for(let btn of closeContactModal){
 
 document.getElementById('button-whatsapp-close').onclick = function(e){
     element.addClass("modal-whatsapp-close", "hide");
+    document.getElementsByTagName("body")[0].classList.remove("modal-open");
 }
 
 
